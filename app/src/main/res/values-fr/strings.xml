@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FinalProject</string>
+    <string name="recipeFinderTitle">Recherche de recettes</string>
+    <string name="searchInputTextHint">Entrez un aliment pour trouver une recette !!!</string>
+    <string name="searchButtonRecipe">Recherchez votre recette</string>
+    <string name="welcome_Covid_Data">Bienvenue dans: \nles données de cas Covid-19</string>
+    <string name="enter_country_name">Entrez le nom du pays:  </string>
+    <string name="country_name">NOM DU PAYS</string>
+    <string name="enter_date">"Entrez la date: "</string>
+    <string name="from">De: </string>
+    <string name="to">À: </string>
+    <string name="YYYY_MM_DD">AAAA-MM-JJ</string>
+    <string name="search_covid_data"> Chercher</string>
+    <string name="country">Pays: </string>
+    <string name="province">Province: </string>
+    <string name="cases">Nombre de cas: </string>
+    <string name="covid_toast_message">Ouverture de l\'application Covid-19 Case Data</string>
+    <string name="alert_title">Voir les résultats</string>
+    <string name="alert_msg">Vérifiez les cas de Covid-19 pour </string>
+    <string name="yes">OUI</string>
+    <string name="no">NON</string>
+    <string name="no_option">Vous avez cliqué sur \"NON\". Entrez un nouveau pays à rechercher</string>
+    <string name="audio_app">Recherche de lecteur audio</string>
+    <string name="recipe_app">Recherche de recette</string>
+    <string name="ticketmaster_app">Recherche Ticketmaster</string>
+    <string name="help_info">Informations d\'aide</string>
+    <string name="covid_case_data_search">Recherche de données de cas Covid-19</string>
+    <string name="author">Auteure: Raylyn Yu</string>
+    <string name="versionCovid">Version: 1</string>
+    <string name="open">Ouvert</string>
+    <string name="recipe_search_header">\tApplication de recherche de recettes!</string>
+    <string name="close">Fermer</string>
+    <string name="help_title">Informations d\'aide</string>
+    <string name= "recipeprintout">Nom de la recette: </string>
+    <string name= "ingredientsprintout">Ingrédients : </string>
+    <string name= "linkprintout">Lien :  </string>
+    <string name="help_message">Cette application vous permet d\'afficher le nombre de cas de Covid-19 pour les pays du monde entier.
+        \n\n Pour RECHERCHER: Entrez le nom du pays, une date “De” et “À” au format AAAA-MM-JJ. Puis cliquez sur "RECHERCHE" !
+        \n Vous pouvez annuler et modifier votre avant de passer à la page suivante en cliquant sur “NON”.
+        \n\n Pour SAUVEGARDER un résultat de recherche: cliquez sur un élément de la liste à afficher et cliquez sur “AJOUTER”.
+        \n\n Pour VOIR votre recherche enregistrée: cliquez sur l\'élément de menu “Recherche enregistrée”.
+        \n\n Pour SUPPRIMER un élément enregistré: cliquez longuement sur l\'élément à supprimer.
+        Vous verrez les détails de ces éléments avant de les supprimer. </string>
+    <string name="help_ok">Commencer</string>
+    <string name="results_for_country">Résultats pour: </string>
+    <string name="add_to_save">Ajouter cet élément à votre liste de recherche enregistrée?</string>
+    <string name="delete_from_save">Supprimer </string>
+    <string name = "recipeitems">Résultats de la recherche de recette: </string>
+    <string name="saved_search">Recherche Enregistrée</string>
+    <string name="date">Date: </string>
+    <string name="dateResult">Date</string>
+    <string name="hideBtnCovid">Cacher</string>
+    <string name="alert_title_delete_cs">Supprimer cet élément de la recherche enregistrée</string>
+    <string name="delete_msg1_cs">Êtes-vous sûr de vouloir supprimer l\'élément:</string>
+    <string name="item_deleted_cs">Article SUPPRIMÉ de votre liste!</string>
+    <string name="saved_title">Covid-19: \nRecherche Enregistrée</string>
+    <string name="addBtnCovid">Ajouter</string>
+    <string name="saved_item_details">Saved Item Details</string>
+
+
+
+
+
+
+
+
+
+    <string name="ticket_help_message">TicketMaster Event Search vous permettra de rechercher tous les événements survenus en fonction du nom de la ville et de la distance par rapport au centre de la ville.
+         \n\n1 - Entrez le nom de la ville que vous souhaitez rechercher \n2 - Sélectionnez la distance du rayon \n3 - Cliquez sur «Rechercher votre événement»!</string>
+    <!--<string name="help_ok">Commencer</string>
+    <string name="results_for_country">RÉSULTATS POUR </string>-->
+    <string name="audioButton">Recherche Artiste</string>
+    <string name="audioEditText"> Écrivez ici</string>
+    <string name="appTitleAudio">Recherche album du artiste</string>
+    <string name="toast_message_audio">This is toast message for  audio class</string>
+    <string name="alert_title_audio">ALERT!</string>
+    <string name="alert_message1_audio">alert message 1 audio class</string>
+    <string name="alert_title_help_recipe">Instructions d\'aide aux recettes!</string>
+    <string name="alert_help_info">Hé utilisateur! Notre application Recipe app est très simple! Vous pouvez entrer une recette que vous souhaitez rechercher et nous vous demanderons quelque chose de savoureux! Veuillez cliquer sur l\'une des autres icônes d\'application dans la barre de menu pour accéder à leurs applications!</string>
+    <string name= "covid_app">Covid-19 Recherche</string>
+    <string name="enterrecipe">Entrez votre recette:</string>
+    <string name="author1">\tAuthor: Cody Howard</string>
+    <string name="recipeFinderHelp">Aide de la recherche de recettes</string>
+    <string name="recipeInitialMessage">"Bienvenue dans notre application de recherche de recettes! Veuillez cliquer EN AVANT pour participer!"</string>
+    <string name="audioInitialMessage">"Bienvenue dans notre application de recherche de audios! Veuillez cliquer EN AVANT pour participer!"</string>
+    <string name="onwardMessage">"EN AVANT"</string>
+    <string name="searching">Recherche...</string>
+    <string name="buy_button">Achetez vos billets</string>
+    <string name="hint_text">Combien de billets acheter?</string>
+    <string name="search_city_name">Saisissez le nom de la ville</string>
+    <string name="text_radius">Sélectionnez le rayon dans lequel vous souhaitez rechercher (KM)</string>
+    <string name="alert_title_ticket">Vous avez cliqué sur l\'élément</string>
+    <string name="alert_message_add">Vous pouvez enregistrer cet événement dans votre liste de favoris</string>
+    <string name="alert_message_delete">Vous pouvez supprimer un événement de votre liste de favoris</string>
+    <string name="alert_btn_add">Ajouter à la liste des favoris</string>
+    <string name="alert_btn_delete">Supprimer de la liste des favoris</string>
+    <string name="alert_btn_cancel">Annuler</string>
+    <string name="toast_info">Événement supprimé de la liste des favoris</string>
+    <string name="snackbar_info">Événement ajouté à la liste des favoris</string>
+    <string name="future_develop">Développement futur pour connecter le système de paiement</string>
+    <string name="go_back">Maintenant, veuillez revenir en arrière en cliquant sur le bouton triangle</string>
+    <string name="alert_help_audio">salut! Notre application est facile à utiliser, veuillez entrer un artiste et nous trouverons tous les albums pour vous!</string>
+    <string name="search_button">Événements de recherche</string>
+    <string name="ticketmaster_event_search">\tTicketMaster Event Search</string>
+    <string name="ticketmaster_author">\tAuteur: Lin Xu</string>
+    <string name="searchButton">Rechercher votre événement</string>
+    <string name="yourNameHint">Saisissez le nom de l\'événement</string>
+    <string name="audio_help">Aide a la atrtiste albums</string>
+    <string name="artist">Entrez le nom de ariste:</string>
+    <string name="version">\tVersion: 1</string>
+
+    <string name="favourite_button">Liste des favoris</string>
+    <string name="listviewtitle">liste des artistes recherches</string>
+
+</resources>
