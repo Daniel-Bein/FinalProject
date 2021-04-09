@@ -17,7 +17,7 @@
 
         <activity android:name=".ticketmaster.TicketMasterSearch" />
         <activity android:name=".ticketmaster.TicketMasterFavPhone" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Songster">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

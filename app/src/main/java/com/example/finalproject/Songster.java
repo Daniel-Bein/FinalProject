@@ -6,12 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import com.example.finalproject.audio.AudioClass;
 
 
-public class MainActivity extends AppCompatActivity {
+public class Songster extends AppCompatActivity {
     public static final String ACTIVITY_NAME = "MAIN_ACTIVITY";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,13 +20,14 @@ public class MainActivity extends AppCompatActivity {
 
         ImageButton buttonAudio = (ImageButton)findViewById(R.id.buttonAudio);
         buttonAudio.setOnClickListener(bt -> {
-            Intent nextPage = new Intent(MainActivity.this, AudioClass.class);
+            Intent nextPage = new Intent(Songster.this, AudioClass.class);
             startActivity(nextPage);
 
 
 
         });
     }
+
 
     @Override
     protected void onStart() {

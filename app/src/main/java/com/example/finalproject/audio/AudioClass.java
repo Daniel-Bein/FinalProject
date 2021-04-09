@@ -4,8 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Base64;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -25,6 +28,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+
 import com.example.finalproject.R;
 
 import com.google.android.material.navigation.NavigationView;
@@ -35,6 +39,9 @@ import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
@@ -46,14 +53,14 @@ import java.util.ArrayList;
 public class AudioClass extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     public static final String ACTIVITY_NAME = "AUDIO_FINDER";
-    ArrayList<AudioDetail> audiodeets = new ArrayList<>();
+    ArrayList<AudioDetail> audiodeets = new ArrayList<>();;
 
     EditText audioField;
     SharedPreferences prefs = null;
     ProgressBar progressBar;
     BaseAdapter adapter;
     ListView list;
-    String audioURL = "https://www.theaudiodb.com/api/v1/json/1/search.php?s=";
+    String audioURL = "https://www.songsterr.com/a/ra/songs.json?pattern=";
     EditText keyword;
 
     /**
@@ -69,23 +76,23 @@ public class AudioClass extends AppCompatActivity implements NavigationView.OnNa
             return audiodeets.get(position);
         }
 
-    /**
-     *
-     * @param position of item
-     * @return id of item postion
-     */
-    @Override
+        /**
+         *
+         * @param position of item
+         * @return id of item postion
+         */
+        @Override
         public long getItemId(int position) {
             return getItem(position).getID();
         }
 
-    /**
-     *
-     * @param position of audio album
-     * @param convertView inflate layout of activity
-     * @param parent view group parent
-     * @return row
-     */
+        /**
+         *
+         * @param position of audio album
+         * @param convertView inflate layout of activity
+         * @param parent view group parent
+         * @return row
+         */
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             View row = convertView;
@@ -159,7 +166,7 @@ public class AudioClass extends AppCompatActivity implements NavigationView.OnNa
         list = findViewById(R.id.listViewAudio);
         /**
 
-        /**
+         /**
          * click listener for toast message to display position id of albums
          */
         list.setOnItemClickListener((parent, view, position, id) -> {
@@ -180,7 +187,7 @@ public class AudioClass extends AppCompatActivity implements NavigationView.OnNa
 
 
         sendButton.setOnClickListener(v -> {
-         progressBar.setVisibility(View.VISIBLE);
+            progressBar.setVisibility(View.VISIBLE);
 
             try {
                 retrieveData();
@@ -224,7 +231,6 @@ public class AudioClass extends AppCompatActivity implements NavigationView.OnNa
                 Intent goToAudio = new Intent(AudioClass.this, AudioClass.class);
                 startActivity(goToAudio);
                 break;
-
 
 
             case R.id.audioHelpIcon:
@@ -328,7 +334,7 @@ public class AudioClass extends AppCompatActivity implements NavigationView.OnNa
                 JSONObject audioResults = new JSONObject(result);
                 JSONArray audioArray = audioResults.getJSONArray("album");
 
-               audiodeets.clear();
+                audiodeets.clear();
 
                 for(int i=0; i< audioArray.length(); i++) {
                     JSONObject audioJson = audioArray.getJSONObject(i);
@@ -344,10 +350,44 @@ public class AudioClass extends AppCompatActivity implements NavigationView.OnNa
 
 
                     Bitmap image = null;
+/**
+                    //albumcover
+                   if(!thumbNail.isEmpty()) {
+                        String fileName = Base64.encodeToString(thumbNail.getBytes(), Base64.DEFAULT) ;
 
+                       Log.i("Do we have file? ", fileName);
+                       if (fileExists(fileName)) {
+                          Log.i("We have a file!", fileName);
+                           FileInputStream stream = null;
 
+                            try {
+                                stream = openFileInput(fileName);
+                              image = BitmapFactory.decodeStream(stream);
+                            } catch (FileNotFoundException e) {
+                               e.printStackTrace();
+                            }
+
+                         } else {
+
+                           URL audioPic = new URL(thumbNail);
+                           urlConnection = (HttpURLConnection) audioPic.openConnection();
+                            urlConnection.connect();
+                            int responseCode = urlConnection.getResponseCode();
+                            if (responseCode == 200) {
+                                image = BitmapFactory.decodeStream(urlConnection.getInputStream());
+
+                                Log.i("Saving....", fileName);
+                                FileOutputStream streamOutput = openFileOutput(fileName, Context.MODE_PRIVATE);
+                                image.compress(Bitmap.CompressFormat.PNG, 80, streamOutput);
+                                streamOutput.flush();
+                                streamOutput.close();
+                            }
+                        }
+
+                    }
+**/
                     AudioDetail audioDetail = new AudioDetail(intSales, strAlbum, strGenre, thumbNail);
-                   if(image != null) audioDetail.setImageData(image);
+                    if(image != null) audioDetail.setImageData(image);
 
                     audiodeets.add(audioDetail);
 
