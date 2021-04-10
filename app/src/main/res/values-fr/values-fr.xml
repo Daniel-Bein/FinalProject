@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">FinalProject</string>
 
+    <string name="artist">Entrez le nom de ariste:</string>
+    <string name="audioInitialMessage">"Bienvenue dans notre application de recherche de audios! Veuillez cliquer EN AVANT pour participer!"</string>
+    <string name="toast_message_audio">This is toast message for  audio class</string>
+    <string name="appTitleAudio">Recherche album du artiste</string>
+    <string name="audioButton">Recherche Artiste</string>
+    <string name="audioEditText"> Écrivez ici</string>
+    <string name="audio_app">Recherche de lecteur audio</string>
 </resources>
