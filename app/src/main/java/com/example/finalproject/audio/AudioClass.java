@@ -60,6 +60,8 @@ public class AudioClass extends AppCompatActivity implements NavigationView.OnNa
     ProgressBar progressBar;
     BaseAdapter adapter;
     ListView list;
+
+    //String audioURL = "https://www.theaudiodb.com/api/v1/json/1/searchalbum.php?s=";
     String audioURL = "https://www.songsterr.com/a/ra/songs.json?pattern=";
     EditText keyword;
 
@@ -332,7 +334,12 @@ public class AudioClass extends AppCompatActivity implements NavigationView.OnNa
 
 
                 JSONObject audioResults = new JSONObject(result);
-                JSONArray audioArray = audioResults.getJSONArray("album");
+                String Name ;
+                Name = audioResults.getString("title");
+                System.out.println("name: "+Name);
+                JSONArray audioArray = audioResults.getJSONArray("");
+
+
 
                 audiodeets.clear();
 
@@ -343,6 +350,8 @@ public class AudioClass extends AppCompatActivity implements NavigationView.OnNa
                     String strAlbum = audioJson.getString("strAlbum");
                     String strGenre = audioJson.getString("strGenre");
                     String intSales = Integer.toString(audioJson.getInt("intSales"));
+                    String SongTitle =  audioJson.getString("title");
+                    System.err.println("Name OF song: "+SongTitle);
 
                     strAlbum = "Album :" + strAlbum;
                     strGenre = "Genre :" + strGenre;
